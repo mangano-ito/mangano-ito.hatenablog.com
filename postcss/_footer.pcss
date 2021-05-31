@@ -1,0 +1,96 @@
+#box2-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    & > * {
+        margin: 1em 0;
+        flex-grow: 1;
+    }
+    
+    & .hatena-module-search-box {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
+    }
+}
+
+.hatena-module-title {
+    margin-bottom: 1.5em;
+    font-weight: bold;
+}
+
+.hatena-module-profile {
+    overflow: hidden;
+
+    & .profile-icon-link {
+        float: left;
+        margin-right: 1em;
+    }
+
+    & .profile-icon {
+        border-radius: 50%;
+    }
+
+    & .my-links {
+        margin: 0;
+        padding: 0;
+
+        & li {
+            display: inline;
+
+            & + li::before {
+                content: ' / ';
+                color: #777;
+            }
+        }
+    }
+
+    & .hatena-follow-button-box {
+        transform-origin: left top;
+        &.btn-subscribe {
+            transform: scale(5);
+            height: 10em;
+        }
+        &.btn-twitter {
+            transform: scale(3);
+            height: 6em;
+        }
+    }
+}
+
+.hatena-module-search-box {
+    margin: 2em 0;
+
+    & .hatena-module-title {
+        display: none;
+    }
+
+    & .search-form {
+        display: flex;
+
+        & input {
+            padding: 0.5em 1em;
+            font-size: larger;
+        }
+
+        & input[type="text"] {
+            flex: 95;
+            border: thin solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.0);
+            color: #fff;
+        }
+
+        & input[type="submit"] {
+            flex: 5;
+            border: thin solid rgba(255, 255, 255, 0.5);
+            background: #fff;
+            color: #000;
+        }
+    }
+}
+
+footer#footer {
+    margin: 3rem 0;
+    text-align: center;
+}

@@ -1,0 +1,86 @@
+.page-archive .archive-heading {
+    font-size: 400%;
+}
+
+.archive-entries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    margin: 1rem 0;
+
+    & .archive-entry {
+        margin: 8em 0;
+        flex-basis: 25em;
+
+        &:hover {
+            & .entry-thumb-link  .entry-thumb {
+                border-radius: 1em;
+                float: none;
+                width: auto;
+                filter: grayscale(0.0);
+                opacity: 0.8;
+            }
+
+            & .archive-entry-body {
+                color: #888;
+            }
+        }
+    }
+
+    & .archive-entry-header {
+        & .archive-date time {
+            font-family: monospace;
+            color: #888;
+        }
+
+        & .entry-title {
+            margin: 0.2em 0;
+            font-feature-settings: "palt";
+            font-weight: normal;
+        }
+    }
+
+    & .categories {
+        margin-bottom: 2em;
+
+        & a {
+            color: #888;
+            border: none;
+
+            & + a::before {
+                content: " + ";
+                color: #555;
+            }
+        }
+    }
+
+    & .archive-entry-body {
+        color: #555;
+
+        & .entry-description {
+            font-family: monospace;
+            max-height: 5.5em;
+            line-height: 2;
+            letter-spacing: 0.1em;
+            overflow: hidden;
+        }
+
+        transition: 0.5s ease-in-out color;
+    }
+
+    & .entry-thumb-link {
+        display: block;
+        border: none;
+
+        & .entry-thumb {
+            border-radius: 1em;
+            float: none;
+            width: auto;
+            filter: grayscale(0.7);
+            opacity: 0.8;
+            transition: 0.5s ease-in-out filter;
+        }
+    }
+
+}    

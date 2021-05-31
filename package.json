@@ -1,0 +1,23 @@
+{
+  "name": "mangano-ito.hatenablog.com",
+  "version": "1.0.0",
+  "description": "The blog stuff.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss -o dist/main.css postcss/main.pcss",
+    "watch": "postcss -w -o dist/main.css postcss/main.pcss"
+  },
+  "author": "mangano-ito <mangano.ito+npm@gmail.com> (https://mangano-ito.hatenablog.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.3",
+    "fibers": "^5.0.0",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-comment": "^2.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nesting": "^8.0.1"
+  }
+}

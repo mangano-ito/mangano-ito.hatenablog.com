@@ -1,4 +1,4 @@
-import BlogConfig from '../../blog.config';
+import BlogConfig from 'blog-config';
 
 /**
  * validate configuration

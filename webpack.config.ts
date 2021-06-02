@@ -2,10 +2,12 @@ import webpack from 'webpack';
 import path from 'path';
 import BlogConfig from './blog.config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 const injectScripts = require('webpack-dev-server-inject-scripts');
 
 const srcPath = path.join(__dirname, '/ts');
 const distPath = path.join(__dirname, '/dist');
+const cssDistPath = path.join(__dirname, '/docs');
 
 type Mode = 'production' | 'development' | 'none';
 export default (_: unknown, { mode }: { mode: Mode }): webpack.Configuration => {
@@ -56,6 +58,11 @@ export default (_: unknown, { mode }: { mode: Mode }): webpack.Configuration => 
             new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
+            }),
+            new CopyPlugin({
+                patterns: [
+                    { from: path.join(distPath, '/main.css'), to: cssDistPath },
+                ],
             }),
         ],
         devServer: {

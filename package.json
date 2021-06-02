@@ -4,9 +4,10 @@
   "description": "The blog stuff.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss -o dist/main.css postcss/main.pcss",
-    "watch": "postcss -w -o dist/main.css postcss/main.pcss"
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mangano-ito <mangano.ito+npm@gmail.com> (https://mangano-ito.hatenablog.com/)",
   "license": "MIT",

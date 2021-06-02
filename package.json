@@ -12,9 +12,11 @@
   "author": "mangano-ito <mangano.ito+npm@gmail.com> (https://mangano-ito.hatenablog.com/)",
   "license": "MIT",
   "devDependencies": {
+    "@types/copy-webpack-plugin": "^8.0.0",
     "@types/mini-css-extract-plugin": "^1.4.3",
     "@types/webpack-dev-server": "^3.11.4",
     "autoprefixer": "^10.2.5",
+    "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
     "cssnano": "^5.0.3",
     "fibers": "^5.0.0",

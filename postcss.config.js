@@ -1,4 +1,14 @@
-module.exports = {
+const BlogConfig = require('./blog.config').default;
+
+const postcssPathReplaceOptionMap = {
+    production: {
+        matched: '/docs',
+        publicPath: BlogConfig.assetBase,
+        mode: 'replace',
+    },
+};
+
+module.exports = ({ env }) => ({
     plugins: [
         require('postcss-import')({
             plugins: [
@@ -13,10 +23,11 @@ module.exports = {
                 'nesting-rules': true,
             },
         }),
+        require('postcss-path-replace')(postcssPathReplaceOptionMap[env] ?? {}),
         require('autoprefixer'),
         require('cssnano')({
             preset: 'default',
         }),
         require('postcss-reporter'),
     ],
-};
+});

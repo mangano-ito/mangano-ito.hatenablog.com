@@ -4,7 +4,34 @@
 }
 
 .hatena-module-profile {
-    overflow: hidden;
+    position: relative;
+
+    &::before {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: -7em;
+        right: 0;
+        left: 0;
+        height: 10em;
+        background: url('https://mangano-ito.github.io/mangano-ito.hatenablog.com/arrow-down.png') 15em 0 no-repeat;
+        background-size: contain;
+    }
+
+    &::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        bottom: -8em;
+        right: 0;
+        left: 0;
+        height: 10em;
+        filter: brightness(180%);
+        background: url('https://mangano-ito.github.io/mangano-ito.hatenablog.com/arrow-up.png') 5em bottom no-repeat;
+        background-size: contain;
+    }
 
     & .profile-icon-link {
         float: left;
@@ -34,12 +61,14 @@
 
         &.btn-subscribe {
             transform: scale(5);
-            height: 10em;
+            margin-bottom: 10em;
+            max-width: 10em;
         }
 
         &.btn-twitter {
             transform: scale(3);
-            height: 6em;
+            margin-bottom: 6em;
+            max-width: 10em;
         }
     }
 }

@@ -2,9 +2,9 @@ name: build
 
 on:
   push:
-    paths:
-      - "**.pcss"
-      - "**.png"
+    #paths:
+    #  - "**.pcss"
+    #  - "**.png"
     branches:
       - master  
   page_build:
@@ -14,13 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2
       - name: setup node
         uses: actions/setup-node@v2
         with:
           node-version: '15'
       - name: npm ci
         run: npm ci
+      - name: ls
+        run: ls -la
       - name: build
         run: npm run build
       - uses: stefanzweifel/git-auto-commit-action@v4.10.0

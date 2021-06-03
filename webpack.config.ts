@@ -64,11 +64,6 @@ export default (_: unknown, { mode }: { mode: Mode }): webpack.Configuration => 
             new MiniCssExtractPlugin({
                 filename: '[name].css',
             }),
-            new CopyPlugin({
-                patterns: [
-                    { from: path.join(distPath, '/main.css'), to: cssDistPath },
-                ],
-            }),
         ],
         devServer: {
             contentBase: __dirname,

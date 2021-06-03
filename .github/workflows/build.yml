@@ -2,12 +2,9 @@ name: build
 
 on:
   push:
-    #paths:
-    #  - "**.pcss"
-    #  - "**.png"
-    branches:
-      - master  
-  page_build:
+    paths:
+      - "**.pcss"
+      - "**.png"
 
 jobs:
   test:

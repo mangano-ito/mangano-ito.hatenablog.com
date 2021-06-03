@@ -26,3 +26,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4.10.0
         with:
           commit_message: update outcome
+          file_pattern: docs/main.css

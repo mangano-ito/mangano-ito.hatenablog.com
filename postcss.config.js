@@ -1,6 +1,10 @@
 module.exports = {
     plugins: [
-        require('postcss-import'),
+        require('postcss-import')({
+            plugins: [
+                require('stylelint'),
+            ],
+        }),
         require('postcss-color-mod-function'),
         require('postcss-mixins'),
         require('postcss-preset-env')({
@@ -13,5 +17,6 @@ module.exports = {
         require('cssnano')({
             preset: 'default',
         }),
+        require('postcss-reporter'),
     ],
 };

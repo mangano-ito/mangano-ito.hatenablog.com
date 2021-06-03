@@ -1,4 +1,6 @@
 .entry {
+    overflow: hidden;
+
     & .entry-header {
         margin-bottom: 7em;
         font-size: 150%;
@@ -108,8 +110,22 @@
     }
 
     & .social-buttons {
-        overflow: hidden;
+        position: relative;
         max-height: 20em;
+
+        &::after {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            background: url('/docs/arrow-for-entry-social-buttons.png') left bottom no-repeat;
+            background-size: contain;
+            filter: brightness(120%);
+            transform: rotate(-10deg);
+            bottom: -5em;
+            left: 15em;
+            width: 15em;
+            height: 10em;
+        }
 
         & .social-button-item {
             transform: scale(4);

@@ -12,17 +12,22 @@ body {
 a {
     text-decoration: none;
     padding-bottom: 0.1em;
+
     /* @deprecated color-mod() function is rejected: https://github.com/w3c/csswg-drafts/commit/034b063697c3dadf144504f52e0858a79cd84414 */
     border-bottom: thin dashed color-mod(var(--color-interactive) alpha(0.4));
-    
+
     &:link {
         color: var(--color-interactive);
     }
+
     &:visited {
         /* @deprecated color-mod() function is rejected: https://github.com/w3c/csswg-drafts/commit/034b063697c3dadf144504f52e0858a79cd84414 */
         color: color-mod(var(--color-interactive) lightness(-30%));
     }
-    &:hover, &:focus, &:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         filter: brightness(1.5);
         border-bottom-style: solid;
     }

@@ -11,18 +11,20 @@ body {
 
 a {
     text-decoration: none;
-    border-bottom: thin dashed rgba(255, 200, 50, 0.25);
-
+    padding-bottom: 0.1em;
+    /* @deprecated color-mod() function is rejected: https://github.com/w3c/csswg-drafts/commit/034b063697c3dadf144504f52e0858a79cd84414 */
+    border-bottom: thin dashed color-mod(var(--color-interactive) alpha(0.4));
+    
     &:link {
-        color: hsla(43deg, 100%, 59%, 1.0);
+        color: var(--color-interactive);
     }
     &:visited {
-        color: hsla(43deg, 100%, 30%, 1.0);
+        /* @deprecated color-mod() function is rejected: https://github.com/w3c/csswg-drafts/commit/034b063697c3dadf144504f52e0858a79cd84414 */
+        color: color-mod(var(--color-interactive) lightness(-30%));
     }
-    &:hover {
-        color: hsla(43deg, 100%, 80%, 1.0);
+    &:hover, &:focus, &:active {
+        filter: brightness(1.5);
         border-bottom-style: solid;
-        border-bottom-color: rgba(255, 200, 50, 0.5);
     }
 }
 

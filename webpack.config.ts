@@ -66,14 +66,14 @@ export default (_: unknown, { mode }: { mode: Mode }): webpack.Configuration => 
             }),
         ],
         devServer: {
-            contentBase: distPath,
+            contentBase: __dirname,
             compress: true,
             hot: true,
             port: 8080,
             open: true,
             inline: true,
             proxy: {
-                '/': {
+                '!/docs/**/*': {
                     target: BlogConfig.origin,
                     changeOrigin: true,
                     autoRewrite: true,

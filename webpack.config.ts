@@ -42,7 +42,12 @@ export default (_: unknown, { mode }: { mode: Mode }): webpack.Configuration => 
                             }
                             : 'style-loader'
                         ),
-                        'css-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                url: false,
+                            },
+                        },
                         'postcss-loader',
                     ],
                 },

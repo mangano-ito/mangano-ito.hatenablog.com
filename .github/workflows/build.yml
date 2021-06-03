@@ -5,6 +5,9 @@ on:
     paths:
       - "**.pcss"
       - "**.png"
+    branches:
+      - master  
+  page_build:
 
 jobs:
   test:

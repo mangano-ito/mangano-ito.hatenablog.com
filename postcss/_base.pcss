@@ -6,11 +6,9 @@
 body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-size: 110%;
-}
-@media (--small-viewport) {
-    body {
-        font-size: 100%;
+
+    @media (--normal-viewport) {
+        font-size: 110%;
     }
 }
 
@@ -41,10 +39,10 @@ a {
 #container {
     max-width: 100em;
     margin: auto;
-    padding: 0 5em;
-}
-@media (--small-viewport) {
-    #container {
-        padding: 0 1em;
+    padding: 0 1em;
+
+    @media (--normal-viewport) {
+        padding: 0 5em;
     }
 }
+

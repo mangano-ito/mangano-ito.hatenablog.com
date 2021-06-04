@@ -15,6 +15,7 @@ module.exports = ({ env }) => ({
                 require('stylelint'),
             ],
         }),
+        require('postcss-custom-media'),
         require('postcss-color-mod-function'),
         require('postcss-mixins'),
         require('postcss-preset-env')({

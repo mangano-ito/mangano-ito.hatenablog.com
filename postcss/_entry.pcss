@@ -14,15 +14,18 @@
             margin: 0.2em 0;
             font-feature-settings: "palt";
             font-weight: book;
-            font-size: 300%;
+            
+            @media (--normal-viewport) {
+                font-size: 300%;
+            }
         }
     }
 
     & .categories {
         margin-bottom: 2em;
         padding-left: 1.75em;
-        background: url('/docs/hash.png') left bottom no-repeat;
-        background-size: contain;
+        background: url('/docs/hash.png') left center no-repeat;
+        background-size: 1em 1em;
 
         & a {
             color: var(--color-aside);
@@ -112,29 +115,31 @@
         }
     }
 
-    & .social-buttons {
-        position: relative;
-        max-height: 20em;
+    @media (--normal-viewport) {
+        & .social-buttons {
+            position: relative;
+            max-height: 20em;
 
-        &::after {
-            position: absolute;
-            display: inline-block;
-            content: '';
-            background: url('/docs/arrow-for-entry-social-buttons.png') left bottom no-repeat;
-            background-size: contain;
-            filter: brightness(120%);
-            transform: rotate(-10deg);
-            bottom: -5em;
-            left: 15em;
-            width: 15em;
-            height: 10em;
-        }
+            &::after {
+                position: absolute;
+                display: inline-block;
+                content: '';
+                background: url('/docs/arrow-for-entry-social-buttons.png') left bottom no-repeat;
+                background-size: contain;
+                filter: brightness(120%);
+                transform: rotate(-10deg);
+                bottom: -5em;
+                left: 15em;
+                width: 15em;
+                height: 10em;
+            }
 
-        & .social-button-item {
-            transform: scale(4);
-            width: 20em;
-            height: 10em;
-            transform-origin: left top;
+            & .social-button-item {
+                transform: scale(4);
+                width: 20em;
+                height: 10em;
+                transform-origin: left top;
+            }
         }
     }
 }

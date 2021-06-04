@@ -69,6 +69,10 @@
         margin: 8em 0;
         flex-basis: 25em;
 
+        @media (--small-viewport) {
+            margin: 2em 0;
+        }
+
         &:hover {
             & .entry-thumb-link .entry-thumb {
                 @mixin cardlike-roundness;

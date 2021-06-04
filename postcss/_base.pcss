@@ -8,6 +8,11 @@ body {
     color: var(--color-foreground);
     font-size: 110%;
 }
+@media (--small-viewport) {
+    body {
+        font-size: 100%;
+    }
+}
 
 a {
     text-decoration: none;
@@ -34,7 +39,12 @@ a {
 }
 
 #container {
-    max-width: 200rem;
+    max-width: 100em;
     margin: auto;
     padding: 0 5em;
+}
+@media (--small-viewport) {
+    #container {
+        padding: 0 1em;
+    }
 }

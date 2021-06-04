@@ -6,31 +6,33 @@
 .hatena-module-profile {
     position: relative;
 
-    &::before {
-        display: inline-block;
-        content: '';
-        position: absolute;
-        pointer-events: none;
-        top: -7em;
-        right: 0;
-        left: 0;
-        height: 10em;
-        background: url('/docs/arrow-down.png') 15em 0 no-repeat;
-        background-size: contain;
-    }
+    @media (--normal-viewport) {
+        &::before {
+            display: inline-block;
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            top: -7em;
+            right: 0;
+            left: 0;
+            height: 10em;
+            background: url('/docs/arrow-down.png') 15em 0 no-repeat;
+            background-size: contain;
+        }
 
-    &::after {
-        display: inline-block;
-        content: '';
-        position: absolute;
-        pointer-events: none;
-        bottom: -8em;
-        right: 0;
-        left: 0;
-        height: 10em;
-        filter: brightness(180%);
-        background: url('/docs/arrow-up.png') 5em bottom no-repeat;
-        background-size: contain;
+        &::after {
+            display: inline-block;
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            bottom: -8em;
+            right: 0;
+            left: 0;
+            height: 10em;
+            filter: brightness(180%);
+            background: url('/docs/arrow-up.png') 5em bottom no-repeat;
+            background-size: contain;
+        }
     }
 
     & .profile-icon-link {
@@ -56,19 +58,21 @@
         }
     }
 
-    & .hatena-follow-button-box {
-        transform-origin: left top;
+    @media (--normal-viewport) {
+        & .hatena-follow-button-box {
+            transform-origin: left top;
 
-        &.btn-subscribe {
-            transform: scale(5);
-            margin-bottom: 10em;
-            max-width: 12em;
-        }
+            &.btn-subscribe {
+                transform: scale(5);
+                margin-bottom: 10em;
+                max-width: 12em;
+            }
 
-        &.btn-twitter {
-            transform: scale(3);
-            margin-bottom: 6em;
-            max-width: 10em;
+            &.btn-twitter {
+                transform: scale(3);
+                margin-bottom: 6em;
+                max-width: 10em;
+            }
         }
     }
 }
@@ -87,7 +91,10 @@
 
         & input {
             padding: 0.5em 1em;
-            font-size: larger;
+
+            @media (--normal-viewport) {
+                font-size: larger;
+            }
         }
 
         & input[type="text"] {

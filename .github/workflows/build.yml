@@ -5,7 +5,7 @@ on:
     paths:
       - "**.pcss"
       - "**.png"
-      - ".github/workflows/**"
+      - ".github/workflows/build.yml"
 
 jobs:
   build:
